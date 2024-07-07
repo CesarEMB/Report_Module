@@ -1,0 +1,265 @@
+/* Estilos generales*/
+
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-items: center;
+  height: 75%;
+  width: 100%;
+  margin-top: 50px;
+}
+
+.content,
+h2,
+button {
+  display: flex;
+  flex-direction: column;
+}
+
+.content h2 {
+  align-self: center;
+  color: rgb(255, 255, 255);
+  font-size: 1rem;
+}
+
+/* Menu izquierdo de la vista principal*/
+
+.menuLeft {
+  display: flex;
+  flex-direction: column;
+  border: 1.5px solid rgb(110, 170, 255);
+  min-height: 400px;
+  width: 20%;
+  min-width: 220px;
+  padding: 5px;
+  margin-left: 30px;
+  background-color: rgba(43, 53, 59, 0.981);
+  border-radius: 1rem;
+  box-shadow: 2px 1px 4px rgba(0, 0, 0, 0.981);
+}
+
+.menuLeft_button {
+  min-width: 100%;
+  padding: 5px;
+  background-color: rgb(255, 255, 255);
+  color: rgb(46, 112, 170);
+  font-size: 0.79rem;
+  border-radius: 0.5rem;
+  font-weight: bold;
+  line-height: 1.35rem;
+}
+
+.menuLeft_button button:hover {
+  text-decoration: underline;
+}
+
+.desactive {
+  text-decoration: none !important;
+  color: rgba(155, 155, 155, 0.786);
+  cursor: default;
+}
+
+/* Menu derecho de la vista principal*/
+
+.menuRight {
+  display: flex;
+  flex-direction: column;
+  border: 1.5px solid rgb(110, 170, 255);
+  min-height: 420px;
+  width: 67%;
+  padding: 2px;
+  margin-left: 40px;
+  margin-right: 30px;
+  border-radius: 1.2rem;
+  box-shadow: 2px 1px 4px rgba(0, 0, 0, 0.981);
+  background-color: rgba(43, 53, 59, 0.981);
+}
+
+.menuRight h2 {
+  font-size: 1.6rem;
+  margin-bottom: 15px;
+  margin-top: 5px;
+}
+
+.menuRight_elements {
+  display: flex;
+  min-height: 150px;
+  flex-direction: row;
+  min-width: 100%;
+  background-color: rgb(255, 255, 255);
+  font-size: 1rem;
+  border-radius: 0.5rem;
+  margin-bottom: 10px;
+  color: black;
+}
+
+.menuRight_button {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  width: 50%;
+  justify-content: center;
+  align-items: center;
+}
+
+.menuRight_button:hover {
+  background-color: rgba(183, 183, 183, 0.716);
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.dataStudent {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.studentContent {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 5px;
+}
+
+.studentContent h3 {
+  font-size: 1.2rem;
+  font-weight: 620;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.studentContent p {
+  font-size: 1rem;
+}
+
+/* Imagenes*/
+
+.student {
+  height: auto;
+  width: 200px;
+  align-content: center;
+  justify-items: center;
+}
+
+.student img {
+  height: 100px;
+  width: 100px;
+  margin: auto;
+}
+
+.menuRight_button img {
+  height: 100px;
+  width: 100px;
+  margin-top: 5px;
+}
+
+/********** Responsive ********/
+
+@media (max-width: 880px) {
+  .menuLeft {
+    min-width: 200px;
+  }
+
+  .menuRight h2 {
+    font-size: 1.6rem;
+  }
+
+  .studentContent p {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 760px) {
+  .content h2 {
+    font-size: 0.9rem;
+  }
+
+  .menuLeft {
+    min-height: 360px;
+    min-width: 160px;
+    margin-left: 20px;
+  }
+
+  .menuLeft_button {
+    min-width: 100%;
+    padding: 5px;
+    font-size: 0.69rem;
+  }
+
+  .menuRight {
+    min-height: 400px;
+    width: 67%;
+    padding: 2px;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .menuRight h2 {
+    font-size: 1.4rem;
+  }
+
+  .menuRight_elements {
+    min-height: 150px;
+    min-width: 100%;
+    font-size: 0.9rem;
+  }
+
+  .studentContent h3 {
+    font-size: 1.1rem;
+  }
+
+  .studentContent p {
+    font-size: 0.8rem;
+  }
+
+  .student {
+    width: 150px;
+  }
+
+  .student img {
+    height: 80px;
+    width: 80px;
+  }
+
+  .menuRight_button img {
+    height: 70px;
+    width: 70px;
+  }
+}
+
+@media (max-width: 630px) {
+
+  .content h2 {
+    font-size: 1.4rem;
+  }
+  .container {
+    display: flex;
+    flex-direction: column-reverse;
+    height: auto;
+    margin-top: 20px;
+  }
+
+  .menuLeft {
+    width: 90%;
+    margin: 0;
+    margin-top: 30px;
+    margin-bottom: 20px;
+  }
+
+  .menuRight {
+    margin: 0;
+    width: 90%;
+  }
+}
+
+@media (max-width: 400px) {
+
+  .content h2 {
+    font-size: 1.2rem;
+  }
+  .studentContent p {
+    font-size: 0.60rem;
+  }
+
+}
