@@ -20,7 +20,6 @@ const Login = () => {
   const [password, setPassword] = useState("");
 
   //Mensaje de error
-  const [errorLogin, setErrorLogin] = useState("");
 
   const [alertMessage, setAlertMessage] = useState(false)
 
@@ -37,8 +36,7 @@ const Login = () => {
     e.preventDefault()
     try {
       await login(email, password)
-      setErrorLogin(messageError)
-      setAlertMessage(true)
+        setAlertMessage(true)
     } catch (e) {
       console.log(e)
     }
@@ -53,9 +51,9 @@ const Login = () => {
 
       <Navbar />
 
-      {errorLogin && alertMessage
+      {alertMessage
         ? (
-          <ErrorNotification setAlertMessage={setAlertMessage}>{errorLogin}</ErrorNotification>
+          <ErrorNotification setAlertMessage={setAlertMessage}>{messageError}</ErrorNotification>
         )
         : null}
 
